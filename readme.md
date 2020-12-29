@@ -43,3 +43,4 @@ modify dataset
 (venv) ➜  dvc_experiments git:(master) cat /tmp/data.xml >> data/data.xml
 
 dvc add data/data.xml
+dvc push
