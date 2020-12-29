@@ -44,3 +44,9 @@ modify dataset
 
 dvc add data/data.xml
 dvc push
+
+#step 7
+
+we can use previos dataset or reverts all changes
+git checkout ecd16698964a56ce4 data/data.xml.dvc 
+dvc checkout
