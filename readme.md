@@ -25,3 +25,12 @@ pip install 'dvc[gdrive]'
 dvc push
 
 open the link with google drive auth and give permissions for DVC
+
+#step 5
+
+we can remove data and cache and run `dvc pull` for restore data
+
+rm -f data/data.xml
+rm -rf .dvc/cache
+
+dvc pull
