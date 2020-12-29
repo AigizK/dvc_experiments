@@ -34,3 +34,12 @@ rm -f data/data.xml
 rm -rf .dvc/cache
 
 dvc pull
+
+#step 6
+
+modify dataset
+
+(venv) ➜  dvc_experiments git:(master) cp data/data.xml /tmp/data.xml
+(venv) ➜  dvc_experiments git:(master) cat /tmp/data.xml >> data/data.xml
+
+dvc add data/data.xml
