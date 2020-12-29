@@ -50,3 +50,36 @@ dvc push
 we can use previos dataset or reverts all changes
 git checkout ecd16698964a56ce4 data/data.xml.dvc 
 dvc checkout
+
+
+#step 8
+
+show all files
+dvc list https://gitgub.... get-started
+
+will show all files(from git and dvc) from folder get-started
+
+dvc get https://github.com/iterative/dataset-registry \
+          use-cases/cats-dogs
+
+will download all files
+
+dvc import https://github.com/iterative/dataset-registry \
+             get-started/data.xml -o data/data.xml
+
+[dvc import] = [dvc get] + [dvc add]
+but if the file was added with import command we can call
+dvc update
+and if this file version was updated on remote repository then we will get the last version
+
+also we can read dataset from python code:
+
+import dvc.api
+
+with dvc.api.open(
+        'get-started/data.xml',
+        repo='https://github.com/iterative/dataset-registry'
+        ) as fd:
+    # ... fd is a file descriptor that can be processed normally.
+
+
